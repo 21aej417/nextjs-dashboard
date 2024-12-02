@@ -118,7 +118,7 @@ export async function GET() {
     return Response.json({ message: 'Database seeded successfully' });
   } catch (error) {
     // await client.sql`ROLLBACK`;
-    // return Response.json({ error }, { status: 500 });
-    return Response.json({ error: error.message || JSON.stringify(error) }, { status: 500 });
+    return Response.json({ error }, { status: 500 });
+    // return Response.json({ error: error.message || JSON.stringify(error) }, { status: 500 });
   }
 }
